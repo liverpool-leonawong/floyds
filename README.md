@@ -1,24 +1,14 @@
+<p id="#readme-top">
+
 # Floyd's Algorithm Implementation
 
 This repository implements Floyd's Algorithm for finding shortest routes in a weighted graph using both recursive and iterative approaches. The implementation includes unit tests and performance comparision.
 
+</p>
+
 ## Purpose
 
 To address the neighborhood’s need for efficient travel from So Kwun Wat to various Tuen Mun malls in Hong Kong or vice-versa
-
-## Files Structure
-
-floyds/
-├── src/
-│   ├── recursion/
-│   │   └── recursive_floyd.py
-│   ├── iterative/
-│   │   └── iterative_floyd.py
-│   └── tests/
-│       ├── unittests.py
-│       └── performance_test.py
-├── README.md
-└── requirements.txt
 
 ## Features
 
@@ -36,14 +26,14 @@ floyds/
 
 ## Getting Started
 
-### Prerequisites
+### PREREQUISITES
 
 #### Required Software
 - Python (>= 3.8)
 - Anaconda or Miniconda
 - Git
 
-### For Mac
+#### For Mac
 
 1. Install Homebrew (if not installed):
    ```bash
@@ -63,13 +53,13 @@ floyds/
     source ~/.zshrc
    ```
 
-### For Windows
+#### For Windows
 
 1. Download and install Python from Python Official Website
 2. Download and install Anaconda from Anaconda Official Website
 3. Ensure Python and Conda are added to PATH during installation
 
-### Installation 
+## Installation 
 
 1. Clone the repository:
    ```sh
@@ -99,9 +89,9 @@ floyds/
    pip install -r requirements.txt
    ```
 
-### Usage ###
+## Usage
 
-#### Running the Algorithm
+### Running the Algorithm
 
 1. To run the recursive version:
    ```sh
@@ -120,7 +110,7 @@ floyds/
    python src\iterative\iterative_floyd.py
    ```
    
-#### Running Tests
+### Running Tests
 
 1. To run unit tests:
    ```sh
@@ -140,7 +130,7 @@ floyds/
    python src\tests\performance_test.py
    ```
 
-### Requirements
+## Requirements
 
 This repository requires the following Python packages:
 - numpy >= 1.24.0 (for array operations)
@@ -148,7 +138,7 @@ This repository requires the following Python packages:
 - coverage >= 7.2.7 (for test coverage reporting)
 - memory_profiler >= 0.61.0 (for memory usage analysis)
 
-### References
+## References
 
 Homebrew
 https://brew.sh/
@@ -159,12 +149,12 @@ https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html
 Python
 https://www.python.org/downloads/
 
-### License
+## License
 
 GNU GENERAL PUBLIC LICENSE Version 3 (29 June 2007)
 See `LICENSE.txt` for more information.
 
-### Contact
+## Contact
 
 Leona Wong 
 
