@@ -1,10 +1,6 @@
-<p id="#readme-top">
-
 # Floyd's Algorithm Implementation
 
 This repository implements Floyd's Algorithm for finding shortest routes in a weighted graph using both recursive and iterative approaches. The implementation includes unit tests and performance comparision.
-
-</p>
 
 ## Purpose
 
@@ -19,7 +15,7 @@ To address the neighborhood’s need for efficient travel from So Kwun Wat to va
    - Self-Distance Handling
    - One-Way Route Scenario
 3. Performance Test
-   The performance test compares both implementations across different graph sizes:
+   <br/>The performance test compares both implementations across different graph sizes:
    - Time Complexity
    - Memory Usage
    - Scalability Comparison
