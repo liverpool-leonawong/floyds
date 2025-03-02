@@ -137,19 +137,19 @@ This repository requires the following Python packages:
 
 ## References
 
-Homebrew
-https://brew.sh/
+`Homebrew`
+<br/>https://brew.sh/
 
-Conda User Guide
-https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html
+`Conda User Guide`
+<br/>https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html
 
-Python
-https://www.python.org/downloads/
+`Python`
+<br/>https://www.python.org/downloads/
 
 ## License
 
 GNU GENERAL PUBLIC LICENSE Version 3 (29 June 2007)
-See `LICENSE.txt` for more information.
+<br/>See `LICENSE.txt` for more information.
 
 ## Contact
 
@@ -158,5 +158,3 @@ Leona Wong
 (<a href="https://github.com/liverpool-leonawong">Github</a>)
 (<a href="https://www.linkedin.com/in/leonawong/">Linkedin</a>)
 (<a href="https://leonawong.com">Website</a>)
-
-Repository: [https://github.com/liverpool-leonawong/floyds.git]
