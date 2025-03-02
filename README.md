@@ -122,7 +122,6 @@ To address the neighborhood’s need for efficient travel from So Kwun Wat to va
    ```
 2. To run performance tests:
    ```sh
-   python src/tests/performance_test.py
    # Mac/Linux
    python src/tests/performance_test.py
 
