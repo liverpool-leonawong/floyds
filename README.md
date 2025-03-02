@@ -160,5 +160,3 @@ Leona Wong
 (<a href="https://leonawong.com">Website</a>)
 
 Repository: [https://github.com/liverpool-leonawong/floyds.git]
-
-<p align="right">(<a href="#readme-top">Back to Top</a>)</p>
