@@ -24,9 +24,7 @@ To address the neighborhood’s need for efficient travel from So Kwun Wat to va
    - Memory Usage
    - Scalability Comparison
 
-## Getting Started
-
-### PREREQUISITES
+## Prerequisites
 
 #### Required Software
 - Python (>= 3.8)
