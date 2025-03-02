@@ -15,14 +15,13 @@ The global variables are:
 """
 from sys import maxsize
 NO_PATH = maxsize
-GRAPH = [[0,   7,  NO_PATH, 8],
-         [NO_PATH,  0,  5,  NO_PATH],
-         [NO_PATH, 5, 0, 2],
-         [NO_PATH, NO_PATH, 2, 0]]
+GRAPH = [[0, 8, NO_PATH, NO_PATH],  # Node 0 (So Kwun Wat)
+         [NO_PATH, 0, 5, NO_PATH],  # Node 1 (Town Plaza)
+         [NO_PATH, 5, 0, 2],  # Node 2 (V City)
+         [7, NO_PATH, 2, 0]]  # Node 3 (Trend Plaza)
 MAX_LENGTH = len(GRAPH[0])
 MIN_LEVEL = 0
 NO_PATH_MARKER = "No Path"
-
 
 def main():
     """
@@ -33,7 +32,6 @@ def main():
 
     # Print the updated graph
     print_out_graph()
-
 
 def print_out_graph():
     """
@@ -50,7 +48,6 @@ def print_out_graph():
                 (start_node, end_node, distance)
             print(message)
 
-
 def recursive_floyd_warshall(outer_loop: int, middle_loop: int, inner_loop: int):
     """
     This function computes shortest path between each pair node
@@ -66,30 +63,30 @@ def recursive_floyd_warshall(outer_loop: int, middle_loop: int, inner_loop: int)
     param: middle_loop: This variable is from the second loop of the iterative version
     param: inner_loop: This variable is from the last loop of the iterative version
     """
-    # Base case: 如果 outer_loop 到達 MAX_LENGTH，停止遞迴
-    if outer_loop >= MAX_LENGTH:
+    # Base case
+    if outer_loop >= MAX_LENGTH:  # When outer loop reaches the maximum length, recursion ends
         return
 
-    # 處理當前情況
+    # handle the case where the start and end nodes are the same, set the distance to 0
     if middle_loop == inner_loop:
-        GRAPH[middle_loop][inner_loop] = 0  # 起點同終點相同，距離為 0
+        GRAPH[middle_loop][inner_loop] = 0
     else:
-        # 更新最短路徑
+        # update the shortest path by comparing the direct path with the path that has an intermediate node
         GRAPH[middle_loop][inner_loop] = min(GRAPH[middle_loop][inner_loop],
                                              GRAPH[middle_loop][outer_loop] + GRAPH[outer_loop][inner_loop])
 
-    # 遞迴步驟：模擬三層迴圈
+    # Recursive steps that simulate the nested loops in the iterative version
     if inner_loop + 1 < MAX_LENGTH:
-        # 如果 inner_loop 未到盡頭，繼續增加 inner_loop
+        # If the inner loop has not reached the end, increment the inner loop
         recursive_floyd_warshall(outer_loop, middle_loop, inner_loop + 1)
     else:
-        # 如果 inner_loop 到咗盡頭，檢查 middle_loop
+        # if the inner loop reaches the end, increment the middle loop and reset the inner loop
         if middle_loop + 1 < MAX_LENGTH:
-            # 如果 middle_loop 未到盡頭，增加 middle_loop，重設 inner_loop
             recursive_floyd_warshall(outer_loop, middle_loop + 1, MIN_LEVEL)
         else:
-            # 如果 middle_loop 到咗盡頭，增加 outer_loop，重設 middle_loop 同 inner_loop
+            # if the middle loop reaches the end, increment the outer loop and reset the middle and inner loops
             recursive_floyd_warshall(outer_loop + 1, MIN_LEVEL, MIN_LEVEL)
+
 
 if __name__ == "__main__":
     main()

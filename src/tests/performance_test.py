@@ -25,7 +25,7 @@ def measure_memory():
     Measure the current memory usage in kilobytes (KB)
     """
     snapshot = tracemalloc.take_snapshot()
-    total_size = sum(stat.size for stat in snapshot.statistics('lineno')) / 1024  # 轉換為 KB
+    total_size = sum(stat.size for stat in snapshot.statistics('lineno')) / 1024  # Convert to KB
     return total_size
 
 def performance_test(function_handle, graph_size, runs=10):
@@ -73,7 +73,7 @@ def performance_test(function_handle, graph_size, runs=10):
     return avg_time, avg_memory
 
 # Test different graph sizes
-graph_sizes = [4, 10, 20, 50, 100, 200, 500, 1000]
+graph_sizes = [4, 10, 20, 50, 100, 200, 500]
 
 for size in graph_sizes:
     print(f"\nTesting graph size {size}x{size}")

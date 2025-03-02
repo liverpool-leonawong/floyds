@@ -15,12 +15,12 @@ The global variables are:
 from sys import maxsize
 from itertools import product 
 NO_PATH =  maxsize
-GRAPH = [[0,   7,  NO_PATH, 8],
-[NO_PATH,  0,  5,  NO_PATH],
-[NO_PATH, 5, 0,   2],
-[NO_PATH, NO_PATH, 2, 0]]
-MAX_LENGTH = len(GRAPH[0])
-NO_PATH_MARKER = "No Path"
+GRAPH = [[0, 8, NO_PATH, NO_PATH],  # Node 0 (So Kwun Wat)
+         [NO_PATH, 0, 5, NO_PATH],  # Node 1 (Town Plaza)
+         [NO_PATH, 5, 0, 2],  # Node 2 (V City)
+         [7, NO_PATH, 2, 0]]  # Node 3 (Trend Plaza)
+MAX_LENGTH = len(GRAPH[0]) # The size of the graph
+NO_PATH_MARKER = "No Path"  # Display “No Path” if there is no direct route
 
 def main():
     """
