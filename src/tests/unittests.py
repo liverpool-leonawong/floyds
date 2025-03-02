@@ -86,7 +86,7 @@ class TestFloydsAlgorithm(unittest.TestCase):
                 ITERATIVE_GRAPH[i][i], 0, f"Iterative self-distance failed at node {i}")
 
     def test_one_way_route_handling(self):
-        """One-Way Route Handling Scenario Test"""
+        """One-Way Route Scenario Test"""
         # Tests one-way route handling with no-path cases in directed graphs
         one_way_graph = [
             [0, 7, NO_PATH, 8],  # So Kwun Wat (Node 0)
